@@ -32,7 +32,6 @@ describe("AddForm submit button", () => {
 
       fireEvent.click(button);
       expect(onSubmitClick).toHaveBeenCalled();
-expect(onSubmitClick).toHaveBeenCalled();
     });
   });
 });
