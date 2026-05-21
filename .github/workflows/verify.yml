@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -29,12 +29,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: SonarQube Scan
+      - name: SonarCloud Scan
         uses: sonarsource/sonarqube-scan-action@v2
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=todolist
-            -Dsonar.organization=maxime
+            -Dsonar.projectKey=mastr0c_todolist
+            -Dsonar.organization=mastr0c
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
